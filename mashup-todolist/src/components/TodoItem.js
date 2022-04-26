@@ -4,7 +4,7 @@ import { MdDone, MdDelete } from 'react-icons/md';
 
 // rightside garbage can
 const Remove = styled.div`
-    opacity: 0;
+    opacity: 0; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,10 +29,10 @@ const CheckCircle = styled.div`
     margin-right: 20px;
     cursor: pointer;
     ${props => 
-        props.done && 
-        css`
-        border: 1px solid #38d9a9;
-        color: #38d9a9;
+      props.done && 
+      css`
+         border: 1px solid #38d9a9;
+         color: #38d9a9;
     `}
 `;
 
@@ -42,8 +42,8 @@ const Text = styled.div`
     font-size: 21px;
     color: #495057;
     ${props =>
-    props.done &&
-    css`
+      props.done &&
+      css`
         color: #ced4da;
     `}
 `;
@@ -62,7 +62,8 @@ const TodoItemBlock = styled.div`
         }
     }
 `;
-function TodoItem(id, done, text) {
+
+function TodoItem({id, done, text}) {
     return (
         <TodoItemBlock>
             <CheckCircle done={done}>{done && <MdDone />}</CheckCircle>
